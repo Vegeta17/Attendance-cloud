@@ -1,8 +1,8 @@
 <?php
-DEFINE('DB_USER','root');
-DEFINE('DB_PASS','');
-DEFINE('DB_HOST','localhost');
-DEFINE('DB_DB','attendance');
+DEFINE('DB_USER','bc8afe9f88980a');
+DEFINE('DB_PASS','7937de62');
+DEFINE('DB_HOST','us-cdbr-east-03.cleardb.com');
+DEFINE('DB_DB','heroku_431cb92137de643');
 DEFINE('EMAIL',1);
 DEFINE('PHONE',2);
 DEFINE('ROLL',3);
