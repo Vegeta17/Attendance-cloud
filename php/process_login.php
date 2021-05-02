@@ -13,7 +13,7 @@ if(verify(EMAIL,$email) === false) respond("error","email");
 
 /*********** SEARCH **********/
 $con = connectTo();
-$exists = $con->query("select * from `attendance`.`teacher` where email = '$email'");
+$exists = $con->query("select * from `heroku_431cb92137de643`.`teacher` where email = '$email'");
 if(!($exists && $con->affected_rows)) {
   $con->close();
   respond("error","not_found");
