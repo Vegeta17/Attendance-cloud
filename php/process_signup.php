@@ -22,13 +22,13 @@ if(verify(NAME,$name) === false) respond("error","name");
 
 /************ SEARCH ***********/
 $con = connectTo();
-$exists = $con->query("select * from `attendance`.`teacher` where email = '$email'");
+$exists = $con->query("select * from `heroku_431cb92137de643`.`teacher` where email = '$email'");
 if($exists && $con->affected_rows) {
   $con->close();
   respond("error","exists");
 } 
 /*********** INSERT ************/
-$addTeacher = $con->query("insert into `attendance`.`teacher` (`name`, `email`, `phone`, `password`) values ('$name', '$email', '$phone', '$pass')");
+$addTeacher = $con->query("insert into `heroku_431cb92137de643`.`teacher` (`name`, `email`, `phone`, `password`) values ('$name', '$email', '$phone', '$pass')");
 if(!$addTeacher && $con->errno()) {
   $con->close();
   die(json_encode(array("error"=>"db_error","code"=>$con->errno(),"msg"=>$con->error())));
