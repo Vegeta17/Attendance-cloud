@@ -62,7 +62,7 @@ function updateSession($email) {
  Does -> Updates the SESSION variable as per the email
 */
   $con = connectTo();
-  $exists = $con->query("select * from `attendance`.`teacher` where email = '$email'");
+  $exists = $con->query("select * from `heroku_431cb92137de643`.`teacher` where email = '$email'");
   $exists = $exists->fetch_assoc();
   $_SESSION['name'] = $exists['name'];
   $_SESSION['email'] = $exists['email'];
